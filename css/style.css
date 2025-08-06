@@ -5,11 +5,68 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Cores principais com melhor contraste */
+    --primary-color: #1a252f;          /* Azul escuro mais forte */
+    --secondary-color: #2d8659;        /* Verde mais escuro */
+    --accent-color: #2980b9;           /* Azul mais escuro */
+    --warning-color: #c0392b;          /* Vermelho mais escuro */
+    --purple-color: #8e44ad;           /* Roxo mais escuro */
+    
+    /* Cores de texto específicas */
+    --text-primary: #1a252f;          /* Texto principal escuro */
+    --text-secondary: #2c3e50;        /* Texto secundário */
+    --text-muted: #5a6c7d;            /* Texto menos importante */
+    --text-light: #ffffff;            /* Texto claro para fundos escuros */
+    
+    /* Cores de fundo */
+    --bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    --card-bg: #ffffff;
+    --light-bg: #f8f9fa;
+    --dark-bg: #343a40;
+    
+    /* Cores de contraste para acessibilidade */
+    --high-contrast-bg: #ffffff;
+    --high-contrast-text: #000000;
+    --medium-contrast-bg: #f8f9fa;
+    --medium-contrast-text: #212529;
+    
+    /* Tipografia */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: clamp(1rem, 2.5vw, 1.125rem);
+    --font-size-small: clamp(0.875rem, 2vw, 1rem);
+    --font-size-large: clamp(1.25rem, 3vw, 1.5rem);
+    --font-size-xl: clamp(1.75rem, 4vw, 2.5rem);
+    --font-size-xxl: clamp(2.5rem, 5vw, 3.5rem);
+    
+    /* Espaçamentos */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Sombras */
+    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-heavy: 0 8px 25px rgba(0, 0, 0, 0.1);
+    
+    /* Bordas */
+    --border-radius: 10px;
+    --border-radius-large: 15px;
+    --border-color: #dee2e6;
+    
+    /* Transições */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.6s ease;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-family);
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: var(--text-primary);
+    background: var(--bg-gradient);
     min-height: 100vh;
 }
 
@@ -36,14 +93,14 @@ body {
 }
 
 .header h1 {
-    color: #2c3e50;
+    color: var(--text-primary);
     font-size: 1.8rem;
     font-weight: 600;
 }
 
 .slide-counter {
-    background: #3498db;
-    color: white;
+    background: var(--accent-color);
+    color: var(--text-light);
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: 500;
@@ -61,28 +118,28 @@ body {
 
 /* Títulos */
 .slide-title {
-    color: #2c3e50;
+    color: var(--text-primary);
     font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 30px;
-    border-bottom: 3px solid #27ae60;
+    border-bottom: 3px solid var(--secondary-color);
     padding-bottom: 15px;
 }
 
 .slide-subtitle {
-    color: #27ae60;
+    color: var(--secondary-color);
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 20px;
 }
 
 .section-title {
-    color: #27ae60;
+    color: var(--secondary-color);
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 15px;
-    border-left: 4px solid #3498db;
+    border-left: 4px solid var(--accent-color);
     padding-left: 15px;
 }
 
